@@ -1,0 +1,60 @@
+html,
+body,
+#effect {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.nightvision {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 255, 0, 0.84) 0%,
+    rgba(0, 0, 0, 0.47) 72%
+  );
+  animation: nv-flicker 3s ease-in-out infinite alternate;
+}
+
+.nightvision::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0,
+    transparent 4px,
+    rgba(0, 0, 0, 0.2) 4px,
+    rgba(0, 0, 0, 0.2) 8px
+  );
+  background-size: 100% 8px;
+  animation: scanlines 0.1s linear infinite;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+@keyframes scanlines {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 8px;
+  }
+}
+
+@keyframes nv-flicker {
+  from {
+    filter: brightness(1) saturate(1);
+  }
+  to {
+    filter: brightness(1.06) saturate(1.08);
+  }
+}

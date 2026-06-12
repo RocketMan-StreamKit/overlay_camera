@@ -1,0 +1,20 @@
+{
+  "name": {
+    "en": "Videotaping",
+    "ru": "Видеосъемка",
+    "uk": "Відеозйомка"
+  },
+  "description": {
+    "en": "Streamer forgot to turn on the video footage of the scene again? Not a problem! We'll help! 😎",
+    "ru": "Стример опять забыл включить видеосъемку с места событий? Не беда! Поможем! 😎",
+    "uk": "Стример знову забув увімкнути відеозйомку з місця подій? Не біда! Допоможемо! 😎"
+  },
+  "type": "overlay",
+  "version": "1.0.0",
+  "author": "RocketMan",
+  "icon": "logo.svg",
+  "web": "index.html",
+  "web_type": "overlay",
+  "web_contents": ["style.css", "main.js", "pnv_final.mp3", "logo.svg"],
+  "permissions": ["WEB_CONTENT"]
+}
